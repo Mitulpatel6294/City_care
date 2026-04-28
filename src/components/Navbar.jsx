@@ -23,7 +23,30 @@ export function Navbar() {
       <header className="navWrap">
         <div className="container navInner">
           <NavLink to="/" className="brand" aria-label="City Care Hospital Home">
-            <div className="brandMark" aria-hidden="true" />
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              focusable="false"
+              style={{ flex: '0 0 auto' }}
+            >
+              <rect width="40" height="40" rx="10" fill="#0A2463" />
+              <text
+                x="50%"
+                y="55%"
+                dominantBaseline="middle"
+                textAnchor="middle"
+                fontFamily="Playfair Display, serif"
+                fontSize="13"
+                fontWeight="700"
+                fill="white"
+                letterSpacing="1"
+              >
+                CCH
+              </text>
+            </svg>
             <div className="brandText">
               <div className="brandName">{HOSPITAL.name}</div>
               <div className="brandTag">{HOSPITAL.tagline}</div>

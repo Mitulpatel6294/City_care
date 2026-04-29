@@ -88,10 +88,7 @@ export function Navbar() {
           </nav>
 
           <div className="navRight">
-            <NavLink to="/appointment" className="btn btnPrimary mobileCta">
-              Book Appointment
-            </NavLink>
-            <NavLink to="/appointment" className="btn btnPrimary">
+            <NavLink to="/appointment" className="btn btnPrimary desktopCta">
               Book Appointment
             </NavLink>
           </div>

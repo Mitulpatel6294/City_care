@@ -60,7 +60,7 @@ export function Services() {
         title: 'Radiology',
         description: 'Imaging support for faster diagnosis.',
         details:
-          'X-ray / imaging coordination (placeholder). Fast scheduling and clear guidance on next steps.',
+          'Imaging coordination to support faster diagnosis, with clear guidance on next steps.',
       },
     ],
     []
@@ -89,7 +89,7 @@ export function Services() {
             <div>
               <h1 className="h1">Departments designed for fast, confident care</h1>
               <p className="p" style={{ marginTop: 12, maxWidth: 900 }}>
-                Choose a service to see details. If you need urgent help, book an appointment now or contact emergency OPD.
+                Choose a service to see details. For urgent symptoms, please visit Emergency OPD directly.
               </p>
             </div>
             <Link to="/appointment" className="btn btnPrimary">

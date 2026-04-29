@@ -10,12 +10,19 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="container">
+        <div className="footerEmergency">
+          <div className="footerEmergencyText">Emergency? Visit Emergency OPD immediately or call us now.</div>
+          <a className="btn btnPrimary" href="tel:+919876543210">
+            Call Emergency
+          </a>
+        </div>
+
         <div className="footerGrid">
           <div>
             <div className="footerTitle">City Care Hospital</div>
             <div className="footerSmall">
-              Premium, safe, and authoritative care for families in Surat. Emergency-ready, doctor-led,
-              and focused on fast, compassionate treatment.
+              Surat-based care with 24/7 Emergency OPD and specialist consultations. Clear explanations,
+              respectful communication, and timely next steps for families.
             </div>
             <div className="copyright">
               © {new Date().getFullYear()} City Care Hospital. All rights reserved.

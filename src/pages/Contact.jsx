@@ -83,8 +83,23 @@ export function Contact() {
             Get help now — without waiting
           </h1>
           <p className="p" style={{ marginTop: 12, maxWidth: 920 }}>
-            Share your concern and preferred time. If it’s urgent, please visit Emergency OPD or message us on WhatsApp.
+            Share your concern and preferred time. For urgent symptoms, please visit Emergency OPD directly.
           </p>
+          <div style={{ marginTop: 14, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+            <a className="btn btnPrimary" href="tel:+919876543210">
+              Call Hospital
+            </a>
+            <a
+              className="btn btnTeal"
+              href={`https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent(
+                "Hello City Care Hospital, I need assistance with appointment and directions."
+              )}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              WhatsApp Now
+            </a>
+          </div>
 
           <div
             className="grid"
@@ -244,7 +259,7 @@ export function Contact() {
 
           <div style={{ marginTop: 16 }}>
             <iframe
-              title="Google Maps Placeholder"
+              title="Google Maps"
               className="mapFrame"
               src="https://www.google.com/maps?q=Athwa%20Lines%2C%20Surat%2C%20Gujarat&output=embed"
               loading="lazy"

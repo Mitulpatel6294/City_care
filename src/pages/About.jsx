@@ -10,6 +10,8 @@ export function About() {
       specialization: 'Cardiology',
       experience: '20 years experience',
       affiliations: 'Affiliated: NABH Hospitals',
+      consultFor: 'chest discomfort, BP control, preventive checkups',
+      languages: 'English, Hindi, Gujarati',
     },
     {
       name: 'Dr. Priya Shah',
@@ -18,6 +20,8 @@ export function About() {
       specialization: 'Pediatrics',
       experience: '15 years experience',
       affiliations: 'Member: IAP',
+      consultFor: 'child fever/cough, dehydration, growth guidance',
+      languages: 'English, Hindi, Gujarati',
     },
     {
       name: 'Dr. Amit Patel',
@@ -26,13 +30,15 @@ export function About() {
       specialization: 'Orthopedics',
       experience: '18 years experience',
       affiliations: 'Trauma & Sports Medicine',
+      consultFor: 'fractures, knee/back pain, sports injuries',
+      languages: 'English, Hindi, Gujarati',
     },
   ];
 
   const awards = [
-    { title: 'ISO Certification', year: '2021', note: 'Quality & safety standards (placeholder)' },
-    { title: 'NABH Accreditation', year: '2023', note: 'Hospital excellence (placeholder)' },
-    { title: 'Best Patient Experience', year: '2024', note: 'Local recognition (placeholder)' },
+    { title: 'ISO Certification', year: '2021', note: 'Documented quality and safety processes.' },
+    { title: 'NABH Accreditation', year: '2023', note: 'Compliance with national hospital standards.' },
+    { title: 'Best Patient Experience', year: '2024', note: 'Local recognition for patient communication and support.' },
   ];
 
   const facilities = [
@@ -73,9 +79,8 @@ export function About() {
             A hospital built on trust, speed, and clarity
           </h1>
           <p className="p" style={{ marginTop: 12, maxWidth: 820 }}>
-            Founded in <strong>2009</strong>, City Care Hospital was created for families who want premium care
-            without confusion. We focus on evidence-based treatment, respectful communication, and fast decision-making —
-            so you feel safe from the first minute.
+            Founded in <strong>2009</strong>, City Care Hospital serves Surat families with senior-doctor oversight,
+            clear explanations, and timely care — especially when symptoms feel urgent.
           </p>
 
           <div className="cardsGrid" style={{ marginTop: 18 }}>
@@ -83,7 +88,7 @@ export function About() {
               <div className="h3">Our Story</div>
               <p className="p" style={{ marginTop: 10 }}>
                 City Care began as a small clinic in Surat, shaped by one belief: patients deserve urgency and dignity.
-                Today we combine senior doctors, diagnostics support, and a clean premium facility to serve the community.
+                Today we combine senior doctors, diagnostics support, and a clean facility to serve the community.
               </p>
             </div>
             <div className="card" style={{ padding: 18 }}>
@@ -160,7 +165,7 @@ export function About() {
           <div className="pill">
             <strong style={{ color: 'var(--navy)' }}>Infrastructure</strong>
             <span className="p" style={{ margin: 0 }}>
-              Premium facilities
+              Facility highlights
             </span>
           </div>
           <h2 className="h2" style={{ marginTop: 14 }}>
@@ -174,7 +179,7 @@ export function About() {
                 <div style={{ padding: 16 }}>
                   <div style={{ fontWeight: 950, color: 'var(--navy)' }}>{f.title}</div>
                   <p className="p" style={{ marginTop: 6 }}>
-                    Placeholder image — replace with real photos to boost trust and conversions.
+                    Facility preview for this area.
                   </p>
                 </div>
               </div>

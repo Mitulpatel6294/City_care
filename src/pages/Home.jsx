@@ -8,6 +8,8 @@ import { TestimonialCard } from '../components/TestimonialCard';
 const PLACEHOLDER = (w, h, text) =>
   `https://placehold.co/${w}x${h}/0A2463/ffffff?text=${encodeURIComponent(text)}`;
 
+const EMERGENCY_PHONE = '+91-98765-43210';
+
 function useCountUp(target, { durationMs = 1200, startWhenVisible = true } = {}) {
   const ref = useRef(null);
   const [value, setValue] = useState(0);
@@ -122,6 +124,8 @@ export function Home() {
         specialization: 'Cardiology',
         experience: '20 years experience',
         affiliations: 'Affiliated: NABH Hospitals',
+        consultFor: 'chest discomfort, BP control, preventive checkups',
+        languages: 'English, Hindi, Gujarati',
       },
       {
         name: 'Dr. Priya Shah',
@@ -130,6 +134,8 @@ export function Home() {
         specialization: 'Pediatrics',
         experience: '15 years experience',
         affiliations: 'Member: IAP',
+        consultFor: 'child fever/cough, dehydration, growth guidance',
+        languages: 'English, Hindi, Gujarati',
       },
       {
         name: 'Dr. Amit Patel',
@@ -138,6 +144,8 @@ export function Home() {
         specialization: 'Orthopedics',
         experience: '18 years experience',
         affiliations: 'Trauma & Sports Medicine',
+        consultFor: 'fractures, knee/back pain, sports injuries',
+        languages: 'English, Hindi, Gujarati',
       },
     ],
     []
@@ -187,23 +195,27 @@ export function Home() {
               <span className="badge">ISO Certified </span>
               <span className="badge">NABH Accredited </span>
               <span className="badge">Surat, Gujarat</span>
+              <span className="badge">Near Citylight, Athwa Lines</span>
             </div>
 
             <h1 className="h1 heroTitle">
               Your Health, Our Priority — Expert Care in the Heart of Surat
             </h1>
-            <p className="p" style={{ marginTop: 12, fontWeight: 650, color: 'rgba(11,18,32,.86)' }}>
-              Pain shouldn’t wait. Whether it’s chest discomfort, fever at night, or sudden injury — our
-              doctors are ready.
+            <p
+              className="p"
+              style={{ marginTop: 12, fontWeight: 650, color: 'rgba(11,18,32,.86)', maxWidth: 760 }}
+            >
+              Chest discomfort, fever at night, injury, or ongoing health concerns — we help you understand what’s
+              happening and what to do next.
             </p>
 
             <div className="heroActions">
               <Link to="/appointment" className="btn btnPrimary">
                 Book Appointment
               </Link>
-              <Link to="/services" className="btn btnGhost">
-                View Services
-              </Link>
+              <a className="btn btnGhost" href={`tel:${EMERGENCY_PHONE.replace(/\s/g, '')}`}>
+                Call Emergency
+              </a>
             </div>
 
             <div className="counterBar" style={{ marginTop: 18 }}>
@@ -226,6 +238,12 @@ export function Home() {
                 <div className="counterLabel">
                   If you're not seen within 15 minutes of your appointment, your consultation is free
                 </div>
+              </div>
+            </div>
+
+            <div className="localProofStrip">
+              <div className="localProofItem">
+                Trusted by families across <strong>Athwa, Citylight, Adajan, and nearby Surat areas</strong>.
               </div>
             </div>
 
@@ -281,9 +299,9 @@ export function Home() {
                   ✓
                 </div>
                 <div>
-                  <div style={{ fontWeight: 950, color: 'var(--navy)' }}>Premium, clean environment</div>
+                  <div style={{ fontWeight: 950, color: 'var(--navy)' }}>Clean, comfortable environment</div>
                   <div className="p" style={{ marginTop: 4 }}>
-                    Designed for comfort, privacy, and trust.
+                    Designed for comfort, privacy, and clear communication.
                   </div>
                 </div>
               </div>
@@ -301,9 +319,9 @@ export function Home() {
             </div>
 
             <div className="card" style={{ padding: 16, background: 'rgba(255,107,53,.06)' }}>
-              <div style={{ fontWeight: 950, color: 'var(--navy)' }}>Pain point headline</div>
+              <div style={{ fontWeight: 950, color: 'var(--navy)' }}>Late-night worry?</div>
               <div className="p" style={{ marginTop: 6, color: 'rgba(11,18,32,.86)', fontWeight: 650 }}>
-                “Worried about your child’s fever at 2AM? We’re here.”
+                “Worried about your child’s fever at 2AM? Walk in anytime — we’ll guide you calmly.”
               </div>
             </div>
           </aside>
@@ -338,17 +356,53 @@ export function Home() {
             </span>
           </div>
           <h2 className="h2" style={{ marginTop: 14 }}>
-            Premium care that feels safe and decisive
+            Care that feels safe and decisive
           </h2>
           <p className="p" style={{ marginTop: 10 }}>
-            We blend senior doctor oversight with efficient processes — so you get answers faster, with less stress.
+            Senior doctor oversight and organised processes — so you get clear answers faster, with less stress.
           </p>
 
           <div className="iconGrid" style={{ marginTop: 16 }}>
             <WhyCard icon="⏱️" title="Fast Consult Flow" text="Quick registration, smart triage, and clear next steps." />
             <WhyCard icon="🧪" title="Diagnostics Support" text="Lab + radiology coordination for faster diagnosis." />
-            <WhyCard icon="🛡️" title="Safety Standards" text="Clean, premium facility with strict hygiene protocols." />
+            <WhyCard icon="🛡️" title="Safety Standards" text="Clean facility with careful hygiene practices." />
             <WhyCard icon="🤝" title="Human Care" text="Respectful communication and transparent guidance." />
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="card" style={{ padding: 20, background: 'rgba(10,36,99,.06)' }}>
+            <div style={{ display: 'flex', alignItems: 'end', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
+              <div>
+                <div className="pill">
+                  <strong style={{ color: 'var(--navy)' }}>Emergency</strong>
+                  <span className="p" style={{ margin: 0 }}>
+                    24/7 walk-in
+                  </span>
+                </div>
+                <h2 className="h2" style={{ marginTop: 14 }}>
+                  Emergency OPD — Walk in anytime
+                </h2>
+                <p className="p" style={{ marginTop: 10, maxWidth: 900 }}>
+                  If symptoms feel urgent, come directly to Emergency. We prioritise critical cases first and explain the
+                  plan clearly to families.
+                </p>
+                <div className="p" style={{ marginTop: 10, color: 'rgba(11,18,32,.86)', fontWeight: 750 }}>
+                  Chest pain • Breathing difficulty • Severe injury/bleeding • High fever with drowsiness
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                <a className="btn btnPrimary" href={`tel:${EMERGENCY_PHONE.replace(/\s/g, '')}`}>
+                  Call Emergency
+                </a>
+                <Link className="btn btnGhost" to="/contact">
+                  Get Directions
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -430,6 +484,11 @@ export function Home() {
               <TestimonialCard key={t.name} {...t} />
             ))}
           </div>
+          <div style={{ marginTop: 14, display: 'flex', justifyContent: 'center' }}>
+            <Link to="/appointment" className="btn btnPrimary">
+              Book Appointment
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -457,7 +516,7 @@ export function Home() {
 
           <div style={{ marginTop: 16 }}>
             <iframe
-              title="Google Maps Placeholder"
+              title="Google Maps"
               className="mapFrame"
               src="https://www.google.com/maps?q=Surat%2C%20Gujarat%2C%20India&output=embed"
               loading="lazy"

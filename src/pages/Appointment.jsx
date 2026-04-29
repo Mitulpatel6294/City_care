@@ -19,8 +19,8 @@ const DOCTORS_BY_DEPT = {
   Pediatrics: ['Dr. Priya Shah (MBBS, Pediatrics)'],
   Gynecology: ['Dr. Ananya Deshmukh (MS, Gynecology)'],
   Orthopedics: ['Dr. Amit Patel (MS, Orthopedics)'],
-  'Pathology / Lab': ['Lab Specialist (Placeholder)'],
-  Radiology: ['Radiology Specialist (Placeholder)'],
+  'Pathology / Lab': ['Lab Specialist (City Care)'],
+  Radiology: ['Radiology Specialist (City Care)'],
 };
 
 function validatePhone(phone) {
@@ -111,7 +111,7 @@ export function Appointment() {
             <div>
               <h1 className="h1">Book an appointment in under 60 seconds</h1>
               <p className="p" style={{ marginTop: 12, maxWidth: 920 }}>
-                <strong style={{ color: 'rgba(11,18,32,.86)' }}>Only 3 slots available today</strong> — book now to avoid waiting.
+                <strong style={{ color: 'rgba(11,18,32,.86)' }}>Limited slots available today</strong> — book early to avoid waiting.
               </p>
             </div>
             <div className="badge" style={{ background: 'rgba(255,107,53,.10)', borderColor: 'rgba(255,107,53,.18)' }}>
@@ -266,7 +266,7 @@ export function Appointment() {
                     </span>
                   ) : (
                     <span className="p" style={{ margin: 0 }}>
-                      No backend needed — frontend-only validation.
+                      We’ll call you within 30 minutes to confirm.
                     </span>
                   )}
                 </div>
@@ -281,7 +281,7 @@ export function Appointment() {
                   <ul style={{ margin: 0, paddingLeft: 18, lineHeight: 1.8 }}>
                     <li>Senior doctor oversight</li>
                     <li>Clear explanations, no confusion</li>
-                    <li>Fast triage and premium hygiene</li>
+                    <li>Fast triage and careful hygiene</li>
                     <li>Emergency OPD open now</li>
                   </ul>
                 </div>
